@@ -20,7 +20,7 @@ WHITE="$(tput setaf 7)"
 RESET="$(tput sgr0)"
 
 # default. override in .env
-PORTS="2001"
+PORTS="4242"
 
 if [[ -f .env ]]; then
     source .env
