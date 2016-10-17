@@ -1,15 +1,15 @@
 # Endpoint for P2P node to listen on
-p2p-endpoint = 0.0.0.0:2228
+p2p-endpoint = 0.0.0.0:4242
 
 # Maxmimum number of incoming connections on P2P endpoint
 # p2p-max-connections =
 
 # P2P nodes to connect to on startup (may specify multiple times)
-seed-node = 95.89.13.228:2228                   # @cyberfounder (NL)
-seed-node = 95.85.33.35:2228                    # @litvintech (NL)
-seed-node = 136.243.33.85:2228                  # @smailer (DE)
-seed-node = golos-seed.someguy123.com:2228      # @someguy123 (USA)
-seed-node = steemul.ru:2228                     # @xtar (DE)
+seed-node = 95.89.13.228:4242                   # @cyberfounder (NL)
+seed-node = 95.85.33.35:4242                    # @litvintech (NL)
+seed-node = 136.243.33.85:4242                  # @smailer (DE)
+seed-node = golos-seed.someguy123.com:4242      # @someguy123 (USA)
+seed-node = steemul.ru:4242                     # @xtar (DE)
 
 # Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.
 # checkpoint =
