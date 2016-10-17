@@ -9,22 +9,21 @@ RUN apt-get update && \
 	apt-get install -y autotools-dev build-essential g++ libbz2-dev libicu-dev python-dev wget doxygen python3 python3-dev libboost-all-dev curl && \
         apt-get clean -qy
 # P2P (seed) port
-EXPOSE 2001
+EXPOSE 2229
 # RPC ports
 EXPOSE 5000
 EXPOSE 8090
 
-ARG golosd_version=v0.15.1RCT2
+ARG golosd_version=v0.14.2
 
 RUN cd ~ && \
 	git clone https://github.com/GolosChain/golos.git && \
 	cd golos && \
 	git checkout ${golosd_version} && \
-	git submodule update --init --recursive
-#RUN cd ~/golos && export BOOST_ROOT=$HOME/opt/boost_1_60_0 && \
-RUN cd ~/golos && \
+	git submodule update --init --recursive \
+        && cd ~/golos && \
 	cmake -DCMAKE_BUILD_TYPE=Release . && \
-	make -j3 && make install && rm -rf ~/golos
+	make -j4 && make install && rm -rf ~/golos
 VOLUME /golos
 WORKDIR /golos
 
