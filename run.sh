@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Steem node manager
+# Golos node manager
 # Released under GNU AGPL by Someguy123
 #
 
@@ -26,6 +26,10 @@ if [[ -f .env ]]; then
     source .env
 fi
 
+if [[ ! -f data/witness_node_data_dir/config.ini ]]; then
+    echo "config.ini not found. copying example (seed)";
+    cp data/witness_node_data_dir/config.ini.example data/witness_node_data_dir/config.ini
+fi
 
 IFS=","
 DPORTS=""
@@ -43,14 +47,14 @@ help() {
     echo "Usage: $0 COMMAND [DATA]"
     echo
     echo "Commands: "
-    echo "    start - starts steem container"
-    echo "    stop - stops steem container"
-    echo "    status - show status of steem container"
-    echo "    restart - restarts steem container"
+    echo "    start - starts golos container"
+    echo "    stop - stops golos container"
+    echo "    status - show status of golos container"
+    echo "    restart - restarts golos container"
     echo "    install - pulls latest docker image from server (no compiling)"
-    echo "    rebuild - builds steem container (from docker file), and then restarts it"
-    echo "    build - only builds steem container (from docker file)"
-    echo "    logs - show all logs inc. docker logs, and steem logs"
+    echo "    rebuild - builds golos container (from docker file), and then restarts it"
+    echo "    build - only builds golos container (from docker file)"
+    echo "    logs - show all logs inc. docker logs, and golos logs"
     echo "    wallet - open cli_wallet in the container"
     echo "    enter - enter a bash session in the container"
     echo
@@ -60,18 +64,18 @@ help() {
 build() {
     echo $GREEN"Building docker container"$RESET
     cd $DOCKER_DIR
-    docker build -t steem .
+    docker build -t golos .
 }
 
 install() {
-    # step 1, get rid of old steem
-    echo "Stopping and removing any existing steem containers"
-    docker stop steem
-    docker rm steem
-    echo "Loading image from someguy123/steem"
-    docker pull someguy123/steem
-    echo "Tagging as steem"
-    docker tag someguy123/steem steem
+    # step 1, get rid of old golos
+    echo "Stopping and removing any existing golos containers"
+    docker stop golos
+    docker rm golos
+    echo "Loading image from someguy123/golos"
+    docker pull someguy123/golos
+    echo "Tagging as golos"
+    docker tag someguy123/golos golos
     echo "Installation completed. You may now configure or run the server"
 }
 
@@ -99,7 +103,7 @@ start() {
     if [[ $? == 0 ]]; then
         docker start $DOCKER_NAME
     else
-        docker run $DPORTS -v "$DATADIR":/steem -d --name $DOCKER_NAME -t steem
+        docker run $DPORTS -v "$DATADIR":/golos -d --name $DOCKER_NAME -t golos
     fi
 }
 

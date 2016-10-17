@@ -1,6 +1,6 @@
 
-# cd ~/dkr && docker build -t steem .
-# docker run -p 0.0.0.0:2001:2001 -v $PWD/data:/steem -d -t steem
+# cd ~/dkr && docker build -t golos .
+# docker run -p 0.0.0.0:2001:2001 -v $PWD/data:/golos -d -t golos
 
 FROM ubuntu:xenial
 RUN apt-get update && \
@@ -14,19 +14,19 @@ EXPOSE 2001
 EXPOSE 5000
 EXPOSE 8090
 
-ARG steemd_version=v0.14.2
+ARG golosd_version=v0.15.1RCT2
 
 RUN cd ~ && \
-	git clone https://github.com/steemit/steem.git && \
-	cd steem && \
-	git checkout ${steemd_version} && \
+	git clone https://github.com/GolosChain/golos.git && \
+	cd golos && \
+	git checkout ${golosd_version} && \
 	git submodule update --init --recursive
-#RUN cd ~/steem && export BOOST_ROOT=$HOME/opt/boost_1_60_0 && \
-RUN cd ~/steem && \
+#RUN cd ~/golos && export BOOST_ROOT=$HOME/opt/boost_1_60_0 && \
+RUN cd ~/golos && \
 	cmake -DCMAKE_BUILD_TYPE=Release . && \
-	make -j3 && make install && rm -rf ~/steem
-VOLUME /steem
-WORKDIR /steem
+	make -j3 && make install && rm -rf ~/golos
+VOLUME /golos
+WORKDIR /golos
 
-RUN echo "Please configure me! You need to mount a data directory onto /steem of this container to it to function correctly. (if you're using Steem-in-a-box most of this is handled automatically)"
-CMD ["sh", "-c", "/usr/local/bin/steemd --replay-blockchain"]
+RUN echo "Please configure me! You need to mount a data directory onto /golos of this container to it to function correctly. (if you're using golos-in-a-box most of this is handled automatically)"
+CMD ["sh", "-c", "/usr/local/bin/golosd --replay-blockchain"]
