@@ -1,19 +1,20 @@
 # Endpoint for P2P node to listen on
-p2p-endpoint = 0.0.0.0:4242
+p2p-endpoint = 0.0.0.0:4243
 
 # Maxmimum number of incoming connections on P2P endpoint
 # p2p-max-connections =
 
 # P2P nodes to connect to on startup (may specify multiple times)
-seed-node = 95.89.13.228:4242                   # @cyberfounder (NL)
-seed-node = 95.85.33.35:4242                    # @litvintech (NL)
-seed-node = 136.243.33.85:4242                  # @smailer (DE)
-seed-node = golos-seed.someguy123.com:4242      # @someguy123 (USA)
-seed-node = steemul.ru:4242                     # @xtar (DE)
-seed-node = 88.99.13.48:4242                    # @primus (DE)
-seed-node = 52.57.156.202:4242                  # @smooth (DE)
-seed-node = golos.steem.ws:4242                 # @jesta (US)
-seed-node = golos-seed.arcange.eu:4242          # @arcange (EU)
+seed-node = 95.89.13.228:4243                   # @cyberfounder (NL)
+seed-node = 95.85.33.35:4243                    # @litvintech (NL)
+seed-node = 136.243.33.85:4243                  # @smailer (DE)
+seed-node = golos-seed.someguy123.com:4243      # @someguy123 (USA)
+seed-node = steemul.ru:4243                     # @xtar (DE)
+seed-node = 88.99.13.48:4243                    # @primus (DE)
+seed-node = 52.57.156.202:4243                  # @smooth (DE)
+seed-node = golos.steem.ws:4243                 # @jesta (US)
+seed-node = golos-seed.arcange.eu:4243          # @arcange (EU)
+seed-node = seed.roelandp.nl:4243               # @roelandp (CA)
 
 # Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.
 # checkpoint =
