@@ -13,6 +13,7 @@ seed-node = steemul.ru:4242                     # @xtar (DE)
 seed-node = 88.99.13.48:4242                    # @primus (DE)
 seed-node = 52.57.156.202:4242                  # @smooth (DE)
 seed-node = golos.steem.ws:4242                 # @jesta (US)
+seed-node = golos-seed.arcange.eu:4242          # @arcange (EU)
 
 # Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.
 # checkpoint =
