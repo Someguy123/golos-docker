@@ -15,6 +15,11 @@ seed-node = 52.57.156.202:4243                  # @smooth (DE)
 seed-node = golos.steem.ws:4243                 # @jesta (US)
 seed-node = golos-seed.arcange.eu:4243          # @arcange (EU)
 seed-node = seed.roelandp.nl:4243               # @roelandp (CA)
+seed-node = golosnode.com:4243                  # @steem-id (FR)
+seed-node = 173.208.206.34:4243                 # @serejandmyself (Kansas, US)
+seed-node = 142.54.168.58:4243                  # @steemychicken1 (Kansas, US)
+seed-node = 5.9.18.213:4243                     # @pfunk (DE)
+seed-node = 94.23.200.113:4243                  # @steve-walschot (FR)
 
 # Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.
 # checkpoint =
