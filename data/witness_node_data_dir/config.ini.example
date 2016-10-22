@@ -20,6 +20,7 @@ seed-node = 173.208.206.34:4243                 # @serejandmyself (Kansas, US)
 seed-node = 142.54.168.58:4243                  # @steemychicken1 (Kansas, US)
 seed-node = 5.9.18.213:4243                     # @pfunk (DE)
 seed-node = 94.23.200.113:4243                  # @steve-walschot (FR)
+seed-node = 89.179.243.53:4243                  # @litrbooh (RU)
 
 # Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.
 # checkpoint =
