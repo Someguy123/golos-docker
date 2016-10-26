@@ -7,7 +7,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DOCKER_DIR="$DIR/dkr"
 DATADIR="$DIR/data"
-DOCKER_NAME="seed"
+DOCKER_NAME="golos-seed"
 
 BOLD="$(tput bold)"
 RED="$(tput setaf 1)"
