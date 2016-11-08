@@ -22,6 +22,7 @@ seed-node = 5.9.18.213:4243                     # @pfunk (DE)
 seed-node = 94.23.200.113:4243                  # @steve-walschot (FR)
 seed-node = 89.179.243.53:4243                  # @litrbooh (RU)
 seed-node = golos.imcoins.org:4243              # @dr2073 (RU)
+seed-node = node.golostools.ru:4243             # @on0tole (DE)
 
 # Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.
 # checkpoint =
