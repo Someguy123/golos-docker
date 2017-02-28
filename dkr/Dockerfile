@@ -28,4 +28,4 @@ VOLUME /golos
 WORKDIR /golos
 
 RUN echo "Please configure me! You need to mount a data directory onto /golos of this container to it to function correctly. (if you're using golos-in-a-box most of this is handled automatically)"
-CMD ["sh", "-c", "/usr/local/bin/golosd --replay-blockchain"]
+CMD ["sh", "-c", "/usr/local/bin/golosd"]
