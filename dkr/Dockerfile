@@ -14,7 +14,7 @@ EXPOSE 2229
 EXPOSE 5000
 EXPOSE 8090
 
-ARG golosd_version=v0.14.3
+ARG golosd_version=v0.16.3
 
 RUN cd ~ && \
 	git clone https://github.com/GolosChain/golos.git && \

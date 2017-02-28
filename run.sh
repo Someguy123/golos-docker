@@ -103,7 +103,7 @@ start() {
     if [[ $? == 0 ]]; then
         docker start $DOCKER_NAME
     else
-        docker run $DPORTS -v "$DATADIR":/golos -d --name $DOCKER_NAME -t golos
+        docker run $DPORTS -v /dev/shm:/shm -v "$DATADIR":/golos -d --name $DOCKER_NAME -t golos
     fi
 }
 

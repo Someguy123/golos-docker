@@ -1,6 +1,13 @@
 # Endpoint for P2P node to listen on
 p2p-endpoint = 0.0.0.0:4243
 
+# Shared file size
+shared-file-size = 12G
+shared-file-dir = /shm/
+
+# Target blocks to flush
+flush = 100000
+
 # Maxmimum number of incoming connections on P2P endpoint
 # p2p-max-connections =
 
