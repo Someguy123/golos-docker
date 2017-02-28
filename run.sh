@@ -149,6 +149,15 @@ status() {
 
 }
 
+replay() {
+    echo "Removing old container"
+    docker stop $DOCKER_NAME
+    docker rm $DOCKER_NAME
+    echo "Running steem with replay..."
+    docker run $DPORTS -v /dev/shm:/shm -v "$DATADIR":/steem -d --name $DOCKER_NAME -t steem steemd --replay
+    echo "Started."
+}
+
 if [ "$#" -ne 1 ]; then
     help
 fi
@@ -163,6 +172,9 @@ case $1 in
         ;;
     start)
         start
+        ;;
+    replay)
+        replay
         ;;
     stop)
         stop
