@@ -110,6 +110,7 @@ start() {
 stop() {
     echo $RED"Stopping container..."$RESET
     docker stop $DOCKER_NAME
+    docker rm $DOCKER_NAME
 }
 
 enter() {
@@ -118,6 +119,10 @@ enter() {
 
 wallet() {
     docker exec -it $DOCKER_NAME cli_wallet
+}
+
+remote_wallet() {
+    docker run -v "$DATADIR":/golos --rm -it golos cli_wallet -s wss://node.golos.ws
 }
 
 logs() {
